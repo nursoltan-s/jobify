@@ -11,6 +11,7 @@ gem 'uglifier', '>= 1.3.0' # Use Uglifier as compressor for JavaScript assets
 gem 'turbolinks', '~> 5' # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'bootsnap', '>= 1.1.0', require: false # Reduces boot times through caching; required in config/boot.rb
 gem 'simple_form', '~> 4.1' # Forms made easy!
+gem 'better_errors', '~> 2.5', '>= 2.5.1' # Provides a better error page for Rails and other Rack apps.
 gem 'bootstrap', '~> 4.3', '>= 4.3.1'
 gem 'devise', '~> 4.6', '>= 4.6.2' 
 gem 'haml-rails', '~> 2.0', '>= 2.0.1'
