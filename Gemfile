@@ -13,6 +13,7 @@ gem 'bootsnap', '>= 1.1.0', require: false # Reduces boot times through caching;
 gem 'simple_form', '~> 4.1' # Forms made easy!
 gem 'better_errors', '~> 2.5', '>= 2.5.1' # Provides a better error page for Rails and other Rack apps.
 gem 'bootstrap', '~> 4.3', '>= 4.3.1'
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.5' # font-awesome-rails provides the Font-Awesome web fonts and stylesheets as a Rails engine for use with the asset pipeline.
 gem 'devise', '~> 4.6', '>= 4.6.2' 
 gem 'haml-rails', '~> 2.0', '>= 2.0.1'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.3'

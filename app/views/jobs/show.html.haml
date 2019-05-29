@@ -1,6 +1,26 @@
-= @job.inspect
-%p
-  
+.jumbotron.bg-gradient-light
+  %h3.text-center
+    = @job.title
+  .d-flex.justify-content-center.mt-3
+    .btn.btn-sm.btn-primary
+      = @job.job_type.humanize.upcase
+    %p
+      = fa_icon "map-marker"
+      = @job.location
+      |
+    %p
+      = fa_icon "calendar"
+      = time_ago_in_words @job.created_at
+      ago
+      |
+    %p
+      = fa_icon "home"
+      = @job.company.title
 
-.container
-  = @job.job_type
+.container.content-area
+  .row
+    .col-md-10.col-sm-12
+      %h4 Overview
+      = image_tag @job.hero_image, alt: 'Company Image', class: 'hero-image'
+    .col-md-2.col-sm-6.col-xs-12
+      = render 'sidebar'

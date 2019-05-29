@@ -8,9 +8,25 @@ class JobsController < ApplicationController
   def show
     @job = Job.find(params[:id])
   end
+  
+  def edit
+    @job = Job.find(params[:id])
+  end
 
   def new
     @job = Job.new
+  end
+
+  def update
+    @job = Job.find(params[:id])
+    
+    if @job.update_attributes(job_params)
+      redirect_to @job
+    else
+      respond_to do |format|
+        format.html { render action: "edit" }
+      end
+    end
   end
   
   def create
