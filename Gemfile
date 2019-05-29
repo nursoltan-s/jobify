@@ -9,7 +9,10 @@ gem 'puma', '~> 3.11' # Use Puma as the app server
 gem 'sass-rails', '~> 5.0' # Use SCSS for stylesheets
 gem 'uglifier', '>= 1.3.0' # Use Uglifier as compressor for JavaScript assets
 gem 'turbolinks', '~> 5' # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
+gem 'webpacker', '~> 4.0', '>= 4.0.4' # Use webpack to manage app-like JavaScript modules in Rails
 gem 'bootsnap', '>= 1.1.0', require: false # Reduces boot times through caching; required in config/boot.rb
+gem 'trix-rails', '~> 2.0', require: 'trix' # Easily drop the Trix WYSIWYG editor into your Ruby on Rails application.
+gem 'friendly_id', '~> 5.2', '>= 5.2.5' # FriendlyId is the "Swiss Army bulldozer" of slugging and permalink plugins for Active Record.
 gem 'simple_form', '~> 4.1' # Forms made easy!
 gem 'better_errors', '~> 2.5', '>= 2.5.1' # Provides a better error page for Rails and other Rack apps.
 gem 'bootstrap', '~> 4.3', '>= 4.3.1'

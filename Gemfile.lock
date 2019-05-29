@@ -75,6 +75,8 @@ GEM
     ffi (1.11.1)
     font-awesome-rails (4.7.0.5)
       railties (>= 3.2, < 6.1)
+    friendly_id (5.2.5)
+      activerecord (>= 4.0.0)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
     haml (5.1.1)
@@ -122,6 +124,8 @@ GEM
     popper_js (1.14.5)
     puma (3.12.1)
     rack (2.0.7)
+    rack-proxy (0.6.5)
+      rack
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
     rails (5.2.3)
@@ -215,6 +219,8 @@ GEM
     thor (0.20.3)
     thread_safe (0.3.6)
     tilt (2.0.9)
+    trix-rails (2.0.0)
+      rails (> 4.1, < 6.0)
     turbolinks (5.2.0)
       turbolinks-source (~> 5.2)
     turbolinks-source (5.2.0)
@@ -229,6 +235,10 @@ GEM
       activemodel (>= 5.0)
       bindex (>= 0.4.0)
       railties (>= 5.0)
+    webpacker (4.0.4)
+      activesupport (>= 4.2)
+      rack-proxy (>= 0.6.1)
+      railties (>= 4.2)
     websocket-driver (0.7.0)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.3)
@@ -243,6 +253,7 @@ DEPENDENCIES
   byebug
   devise (~> 4.6, >= 4.6.2)
   font-awesome-rails (~> 4.7, >= 4.7.0.5)
+  friendly_id (~> 5.2, >= 5.2.5)
   haml-rails (~> 2.0, >= 2.0.1)
   jquery-rails (~> 4.3, >= 4.3.3)
   listen (>= 3.0.5, < 3.2)
@@ -254,10 +265,12 @@ DEPENDENCIES
   simple_form (~> 4.1)
   spring
   spring-watcher-listen (~> 2.0.0)
+  trix-rails (~> 2.0)
   turbolinks (~> 5)
   tzinfo-data
   uglifier (>= 1.3.0)
   web-console (>= 3.3.0)
+  webpacker (~> 4.0, >= 4.0.4)
 
 RUBY VERSION
    ruby 2.6.3p62

@@ -1,4 +1,5 @@
 class JobsController < ApplicationController
+  before_action :set_job, only: [:show, :edit, :update]
   before_action :authenticate_user!
 
   def index
@@ -6,11 +7,9 @@ class JobsController < ApplicationController
   end
 
   def show
-    @job = Job.find(params[:id])
   end
   
   def edit
-    @job = Job.find(params[:id])
   end
 
   def new
@@ -18,8 +17,6 @@ class JobsController < ApplicationController
   end
 
   def update
-    @job = Job.find(params[:id])
-    
     if @job.update_attributes(job_params)
       redirect_to @job
     else
@@ -42,9 +39,13 @@ class JobsController < ApplicationController
 
   private
 
+  def set_job
+    @job = Job.friendly.find(params[:id])
+  end
+
   def job_params
     params.require(:job)
           .permit(:title, :job_type, :description, :location, :hero_image)
-          .merge(user_id: current_user.id, company_id: current_user.company.id)
+          .merge(user_id: current_user.id, company_id: current_user.company.id, slug: params[:title])
   end
 end

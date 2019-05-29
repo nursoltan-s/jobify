@@ -1,26 +1,31 @@
-.jumbotron.bg-gradient-light
+.jumbotron.bg-gradient-light.mt-5
   %h3.text-center
     = @job.title
-  .d-flex.justify-content-center.mt-3
-    .btn.btn-sm.btn-primary
+  .d-flex.justify-content-center.mt-3.hero-body
+    .btn.btn-sm.btn-warning.hero-item.hero-tag
       = @job.job_type.humanize.upcase
-    %p
+    %p.hero-item
       = fa_icon "map-marker"
       = @job.location
-      |
-    %p
+      %span.seperator 
+        |
+    %p.hero-item
       = fa_icon "calendar"
+      Posted
       = time_ago_in_words @job.created_at
       ago
-      |
-    %p
+      %span.seperator 
+        |
+    %p.hero-item
       = fa_icon "home"
       = @job.company.title
 
 .container.content-area
   .row
-    .col-md-10.col-sm-12
+    .col-md-10.col-sm-12.pr-5
       %h4 Overview
       = image_tag @job.hero_image, alt: 'Company Image', class: 'hero-image'
+      .text-justify
+        = @job.description.html_safe
     .col-md-2.col-sm-6.col-xs-12
-      = render 'sidebar'
+      = render 'sidebar', company: @job.company

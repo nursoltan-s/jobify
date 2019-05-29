@@ -3,7 +3,7 @@
   .form-inputs
     = f.input :title, required: true
     = f.input :hero_image, as: :file
-    = f.input :description, required: true, as: :text
+    = f.input :description, required: true, as: :trix_editor
     = f.input :location
     = f.input :job_type, collection: Job.job_types.keys.map { |w| [w.humanize, w] }, prompt: 'Select Job Type'
   .form-actions
