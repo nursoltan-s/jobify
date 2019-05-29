@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_one :company
+  has_many :jobs, through: :company
 
   validates_presence_of :first_name, :last_name, :email
 end

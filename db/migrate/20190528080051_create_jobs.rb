@@ -2,8 +2,9 @@ class CreateJobs < ActiveRecord::Migration[5.2]
   def change
     create_table :jobs do |t|
       t.references :company, foreign_key: true
+      t.references :user, foreign_key: true
       t.string :title
-      t.string :job_type
+      t.integer :job_type
       t.string :location
       t.text :description
       t.string :hero_image

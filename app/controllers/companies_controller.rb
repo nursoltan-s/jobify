@@ -1,4 +1,10 @@
 class CompaniesController < ApplicationController
+  before_action :authenticate_user!
+
+  def index
+    @companies = Company.all
+  end
+
   def new
     @company = Company.new
   end
@@ -17,6 +23,8 @@ class CompaniesController < ApplicationController
   private
 
   def company_params
-    params.require(:company).permit(:title, :company_logo, :description, :facebook_url, :twitter_url, :linkedin_url)
+    params.require(:company)
+          .permit(:title, :company_logo, :description, :facebook_url, :twitter_url, :linkedin_url)
+          .merge(user_id: current_user.id)
   end
 end
