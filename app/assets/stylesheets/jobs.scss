@@ -2,6 +2,12 @@
   width: 880px;
 }
 
+.company-logo {
+  width: 165px;
+  height: 165px;
+  border: 1px solid black;
+}
+
 .hero-item {
   margin-right: 20px;
 }
@@ -12,4 +18,8 @@
 
 .hero-tag {
   height: 30px !important;
+}
+
+.sidebar-tag {
+  display: block !important;
 }
