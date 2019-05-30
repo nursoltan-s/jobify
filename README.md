@@ -5,6 +5,10 @@ Jobify is Remote Job Recruitment Board for Software Developers. https://limitles
 **⚠️ Warning:** jobify is in development, many important features are missing, there
 are bugs and performance can be bad.
 
+## Preview
+
+[preview]: https://github.com/nursoltan-s/jobify/assets/images/preview.png 'Jobify'
+
 ## Getting started
 
 ### Requirements
