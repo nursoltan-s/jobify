@@ -7,6 +7,7 @@ class JobsController < ApplicationController
   end
 
   def show
+    @jobs_facade = JobsFacade.new(@related_jobs)
   end
   
   def edit

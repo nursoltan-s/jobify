@@ -1,6 +1,7 @@
 .jumbotron.bg-gradient-light.mt-5
   %h3.text-center
     = @job.title
+    = link_to 'Edit', edit_job_path(@job), class: 'btn btn-primary btn-sm'
   .d-flex.justify-content-center.mt-3.hero-body
     .btn.btn-sm.btn-warning.hero-item.hero-tag
       = @job.job_type.humanize.upcase
@@ -25,9 +26,10 @@
   .row
     .col-md-10.col-sm-12.pr-5
       %h5.text-secondary.mb-4 Overview
-      = image_tag @job.hero_image, alt: 'Company Image', class: 'hero-image'
+      = image_tag @job.hero_image, alt: 'Company Image', width: 880, height: 270, class: 'hero-image'
       %h5.text-secondary.mb-4.mt-4 Company Profile
       .text-justify
         = @job.description.html_safe
     .col-md-2.col-sm-6.col-xs-12
       = render 'sidebar', company: @job.company
+  = render 'jobs_list', jobs: @jobs_facade.related_jobs, title: 'Related Jobs'

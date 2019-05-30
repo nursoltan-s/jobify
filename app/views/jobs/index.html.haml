@@ -1,8 +1,2 @@
-- @jobs.each do |job|
-  .container
-    - if job.hero_image.attached?
-      = image_tag job.hero_image
-    %h2
-      job.title
-    %h4
-      job.description
+.container.mt-10
+  = render 'jobs_list', jobs: @jobs, title: 'All Jobs'

@@ -4,6 +4,7 @@
   text-align: center;
   margin: 100px 0 0;
   padding: 2em 0;
+  font-weight: 400;
 
   h2 {
     font-weight: 400;
@@ -15,6 +16,13 @@
   background-color: #24262b;
   color: #b2b2b2;
   padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.text-widget {
+  h4 {
+    color: #fff !important;
+  }
 }
 
 .widget-text {

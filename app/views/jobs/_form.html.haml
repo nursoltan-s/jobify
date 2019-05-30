@@ -7,4 +7,4 @@
     = f.input :location
     = f.input :job_type, collection: Job.job_types.keys.map { |w| [w.humanize, w] }, prompt: 'Select Job Type'
   .form-actions
-    = f.button :submit, "Create new job"
+    = f.button :submit, "Create new job", class: 'btn btn-primary'

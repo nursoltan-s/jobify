@@ -23,3 +23,45 @@
 .sidebar-tag {
   display: block !important;
 }
+
+.job {
+  &--wrapper {
+    border: 1px solid #999;
+    border-radius: 10px;
+    padding: 15px;
+
+    .row:first-child {
+      padding-bottom: 20px;
+    }
+
+    .row:not(:first-child) {
+      border-top: 1px solid #999;
+      padding-bottom: 20px;
+      padding-top: 20px;
+    }
+
+    .row:last-child {
+      padding-bottom: 0;
+    }
+  }
+
+  &--job-title {
+    margin: 0;
+    margin-left: 20px;
+    margin-top: 10px;
+  }
+
+  &--company-title {
+    font-size: 90%;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+    margin-left: 20px;
+  }
+
+  &--company-img img {
+    height: 80px;
+    width: 80px;
+    border: 1px solid #f2f2e3;
+  }
+}

@@ -7,11 +7,12 @@
     #navbarSupportedContent.collapse.navbar-collapse
       %ul.navbar-nav.ml-auto
         %li.nav-item.active
-          %a.nav-link{href: "#"}
-            Find A Job
-            %span.sr-only (current)
+          = link_to 'Find A Job', jobs_path, class: 'nav-link'
+          %span.sr-only (current)
         %li.nav-item
-          %a.nav-link{href: "#"} Post A Job
+          = link_to 'Post A Job', new_job_path, class: 'nav-link'
+        %li.nav-item
+          = link_to 'Companies', companies_path, class: 'nav-link'
         %li.nav-item.dropdown
           %a#navbarDropdown.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", href: "#", role: "button"}
             Dropdown

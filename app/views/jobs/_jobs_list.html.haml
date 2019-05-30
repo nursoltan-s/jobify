@@ -1,0 +1,24 @@
+%h3.text-secondary.mb-2.mt-4 
+  = title
+.job--wrapper
+  - jobs.each do |job|
+    .row.text-secondary
+      .col-md-6.job--company-img.d-flex
+        .flex-item
+          = image_tag job.company.company_logo
+        .flex-item
+          .job--job-title
+            = link_to job.title, job, class: 'text-secondary'
+          .job--company-title
+            = link_to job.company.title, job.company, class: 'text-secondary'
+      .col-md-3.mt-4
+        = fa_icon 'map-marker'
+        = job.location
+      .col-md-3.mt-3
+        .btn.btn-sm.btn-success.sidebar-tag
+          %span
+            = job.job_type.humanize.upcase
+        %span.text-center.text-sm
+          Posted
+          = time_ago_in_words job.created_at
+          ago
