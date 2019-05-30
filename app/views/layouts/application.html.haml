@@ -11,9 +11,10 @@
   %body
     = render 'layouts/navbar'
     - if notice.present?
-      %p.alert.alert-info
+      %p.alert.alert-info.mt-8
         = notice
     - if alert.present?
-      %p.alert.alert-danger
+      %p.alert.alert-danger.mt-8
         = alert
     = yield
+    = render 'layouts/footer'

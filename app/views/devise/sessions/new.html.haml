@@ -1,10 +1,14 @@
-.container
+.container.mt-10.pl-10.pr-10
   %h2 Log in
   = simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+    = f.error_notification
     .form-inputs
-      = f.input :email, required: false, autofocus: true                      
-      = f.input :password, required: false
-      = f.input :remember_me, as: :boolean if devise_mapping.rememberable?
-    .form-actions
-      = f.button :submit, "Log in"
-  = render "devise/shared/links"
+      = f.input :email, required: true, autofocus: true
+      = f.input :password, required: true
+    .form-actions.d-flex.justify-content-between
+      .action-field.d-flex
+        = f.button :submit, "Log in", class: 'btn btn-sm btn-success'
+        %span.text-secondary.ml-4
+          = f.input :remember_me, as: :boolean if devise_mapping.rememberable?
+      .action-field 
+        = render "devise/shared/links"

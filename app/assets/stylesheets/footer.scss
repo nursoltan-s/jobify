@@ -1,0 +1,57 @@
+.footer-cta {
+  background-color: #7dc246;
+  color: #fff;
+  text-align: center;
+  margin: 100px 0 0;
+  padding: 2em 0;
+
+  h2 {
+    font-weight: 400;
+    margin: 25px 0;
+  }
+}
+
+.footer-widgets {
+  background-color: #24262b;
+  color: #b2b2b2;
+  padding-top: 80px;
+}
+
+.widget-text {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.widget-posts {
+  list-style: none;
+  padding: 0;
+
+  li {
+    margin-top: 20px;
+  }
+}
+
+.post-date {
+  font-size: 80%;
+}
+
+.footer {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background-color: #666;
+  color: #b2b2b2;
+
+  .copyright {
+    font-weight: 700;
+    font-size: 80%;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .socials {
+    i {
+      margin-right: 20px;
+      font-size: 120%;
+    }
+  }
+}
