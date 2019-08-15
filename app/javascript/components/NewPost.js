@@ -7,7 +7,7 @@ function NewPost() {
   const [body, setBody] = useState('');
 
   useEffect(() => {
-    passCsrfToken(document, axios);
+    //passCsrfToken(document, axios);
   }, []);
 
   const handleSubmit = event => {
