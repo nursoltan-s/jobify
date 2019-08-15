@@ -4,13 +4,24 @@
 // like app/views/layouts/application.html.erb. All it does is render <div>Hello React</div> at the bottom
 // of the page.
 
-import React from "react";
-import ReactDOM from "react-dom";
-import App from "../components/App";
+import React, { Component } from 'react';
+import Home from './Home';
+import Posts from './Posts';
+import NewPost from './NewPost';
+import { Route, Switch } from 'react-router-dom';
 
-document.addEventListener("DOMContentLoaded", () => {
-  ReactDOM.render(
-    <App />,
-    document.body.appendChild(document.createElement("div"))
-  );
-});
+class App extends Component {
+  render() {
+    return (
+      <div>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/posts" component={Posts} />
+          <Route exact path="/new_post" component={NewPost} />
+        </Switch>
+      </div>
+    );
+  }
+}
+
+export default App;
