@@ -35,8 +35,18 @@ class NewPost extends React.Component {
       <div>
         <h1>New Post</h1>
         <form onSubmit={e => this.handleSubmit(e)}>
-          <input name="title" placeholder="title" type="text" />
-          <input name="body" placeholder="body" type="text" />
+          <input
+            name="title"
+            placeholder="title"
+            type="text"
+            onChange={this.handleChange}
+          />
+          <input
+            name="body"
+            placeholder="body"
+            type="text"
+            onChange={this.handleChange}
+          />
           <button>Create Post</button>
         </form>
       </div>
