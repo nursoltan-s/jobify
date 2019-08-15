@@ -8,7 +8,7 @@ function Posts() {
     axios.get('/api/posts').then(response => {
       setPosts(response.data.posts);
     });
-  });
+  }, []);
 
   const renderAllPosts = () => {
     return (
