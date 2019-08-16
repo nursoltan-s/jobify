@@ -1,14 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { passCsrfToken } from '../util/helpers';
 
 function NewPost() {
   const [title, setTitle] = useState('');
   const [body, setBody] = useState('');
 
-  useEffect(() => {
-    //passCsrfToken(document, axios);
-  }, []);
+  useEffect(() => {}, []);
 
   const handleSubmit = event => {
     event.preventDefault();

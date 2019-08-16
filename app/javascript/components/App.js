@@ -1,24 +1,41 @@
-// app/javascript/packs/index.js
+import React, { Fragment, useEffect } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-// Run this example by adding <%= javascript_pack_tag 'hello_react' %> to the head of your layout file,
-// like app/views/layouts/application.html.erb. All it does is render <div>Hello React</div> at the bottom
-// of the page.
-
-import React from 'react';
 import Home from './Home';
 import Posts from './Posts';
 import NewPost from './NewPost';
-import { Route, Switch } from 'react-router-dom';
+import Navbar from './routing/PrivateRoute';
+import Routes from './routing/Routes';
+
+// Redux
+import { Provider } from 'react-redux';
+import store from './store';
+import { loadUser } from '../actions/auth';
+import setAuthToken from '../utils/setAuthToken';
+
+if (localStorage.token) {
+  setAuthToken(localStorage.token);
+}
 
 function App() {
+  useEffect(() => {
+    store.dispatch(loadUser());
+  }, []);
+
   return (
-    <div>
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/posts" component={Posts} />
-        <Route exact path="/new_post" component={NewPost} />
-      </Switch>
-    </div>
+    <Provider store={store}>
+      <Router>
+        <Fragment>
+          <Navbar />
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/posts" component={Posts} />
+            <Route exact path="/new_post" component={NewPost} />
+            <Router component={Routes} />
+          </Switch>
+        </Fragment>
+      </Router>
+    </Provider>
   );
 }
 
