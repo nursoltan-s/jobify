@@ -4,8 +4,6 @@
 # or operating system, you probably want to add a global ignore instead:
 #   git config --global core.excludesfile '~/.gitignore_global'
 
-./config/application.yml
-
 # Ignore bundler config.
 /.bundle
 
@@ -24,6 +22,7 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+/config/application.yml
 
 /public/packs
 /public/packs-test
