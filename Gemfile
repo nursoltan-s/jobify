@@ -9,7 +9,7 @@ gem 'puma', '~> 3.11'
 gem 'webpacker', '~> 4.0'
 gem 'figaro', '~> 1.1', '>= 1.1.1'
 gem 'rack-cors', '~> 1.0', '>= 1.0.3'
-# gem 'active_model_serializers', '~> 0.10.10'
+gem 'active_model_serializers', '~> 0.10.10'
 
 # Authentication
 gem 'devise', '~> 4.6', '>= 4.6.2'

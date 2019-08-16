@@ -1,6 +1,6 @@
 class SessionsController < Devise::SessionsController
   respond_to :json
-  
+
   private
   
   def respond_with(resource, _opts = {})
@@ -8,6 +8,6 @@ class SessionsController < Devise::SessionsController
   end
   
   def respond_to_on_destroy
-    head :ok
+    render json: { message: 'Successfully signed out' }, status: :ok
   end
 end
