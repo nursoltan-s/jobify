@@ -30,6 +30,12 @@ module Jobify
     # the framework and any gems in your application.
 
     # Don't generate system test files.
-    config.generators.system_tests = nil
+    config.generators do |g|
+      g.system_tests = nil
+      g.javascripts  = false
+      g.stylesheets  = false
+      g.helper       = false
+      g.template_engine = false
+    end
   end
 end
